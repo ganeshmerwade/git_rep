@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+biggest3()
 {
     int num1, num2, num3;
     printf(" Enter the number1 = ");
@@ -20,5 +20,5 @@ int main()
     {
         printf("\n %d is the largest number.\n", num3);
     }
-    return 0;
+   // return 0;
 }

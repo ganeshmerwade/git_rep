@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(){
+pallindrome(){
     char string1[20];
     int i, length;
     int flag = 0;
@@ -24,5 +24,5 @@ int main(){
     else {
         printf("%s is a palindrome", string1);
     }
-    return 0;
+   // return 0;
 }

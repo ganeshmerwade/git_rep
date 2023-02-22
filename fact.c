@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(int argc, char *argv[])
+factorial(int argc, char *argv[])
 {
     unsigned int iLoop,iFactorial = 1;
     int iNumber=0;
@@ -17,5 +17,5 @@ int main(int argc, char *argv[])
         }
         printf("\n\nFactorial of %d is: %u\n\n\n\n",iNumber,iFactorial);
     }
-    return 0;
+   // return 0;
 }
