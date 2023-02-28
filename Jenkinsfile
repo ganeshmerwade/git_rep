@@ -37,9 +37,10 @@ pipeline {
                 sh 'echo "this is testing stage"'
             }
         }
-        stage('save atrifact'){
+        stage('archive and save'){
             steps{
-                sh 'scp -v -o StrictHostKeyChecking=no ABC.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
+                archiveArtifacts artifacts: 'ABC.exe', followSymlinks: false
+                sh 'scp -v -o StrictHostKeyChecking=no *.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
             }
         }
 
