@@ -19,7 +19,7 @@ pipeline {
         stage('build') {
             steps{
                 sh '''
-                    make clean -f Makefile
+                    make
                 '''
             }
         }
