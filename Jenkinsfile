@@ -26,6 +26,7 @@ pipeline {
         stage('build') {
             steps{
                 sh '''
+                    make clean
                     make
                 '''
             }
