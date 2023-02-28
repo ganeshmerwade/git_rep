@@ -9,16 +9,17 @@ pipeline {
             }
         }
 
-        stage('check main') {
+        stage('check main and makefile') {
             steps{
                 sh '''
-                if (fileExists 'c/main.c) {
-                        echo 'File exists'
-                    } else {
-                        echo 'File does not exist'
-                #fileExists '/c/main.c'
-                #fileExists '/c/Makefile'
-                '''
+                echo "$(pwd)"
+                if [ -f main.c ] && [ -f Makefile ];then
+                echo "required files exists"
+                else
+                echo "files does not exists"
+                exit 1
+                fi
+             '''
            }
         }
 
