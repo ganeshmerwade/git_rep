@@ -1,6 +1,7 @@
 pipeline {
     agent {
   label 'makec'
+    }
     stages{
         stage('get code') {
             steps{
@@ -33,6 +34,6 @@ pipeline {
                 sh 'scp -v -o StrictHostKeyChecking=no *.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds'
             }
         }
+
 }
-    }
 }
