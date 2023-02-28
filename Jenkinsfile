@@ -11,8 +11,14 @@ pipeline {
 
         stage('check main') {
             steps{
-                fileExists '/c/main.c'
-                fileExists '/c/Makefile'
+                sh '''
+                if (fileExists 'c/main.c) {
+                        echo 'File exists'
+                    } else {
+                        echo 'File does not exist'
+                #fileExists '/c/main.c'
+                #fileExists '/c/Makefile'
+                '''
            }
         }
 
