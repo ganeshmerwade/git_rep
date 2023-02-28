@@ -31,7 +31,7 @@ pipeline {
         }
         stage('save atrifact'){
             steps{
-                sh 'scp -v -o StrictHostKeyChecking=no *.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds/'
+                sh 'scp -v -o StrictHostKeyChecking=no ABC.exe ubuntu@172.31.12.87:/home/ubuntu/cbuilds/'
             }
         }
 
